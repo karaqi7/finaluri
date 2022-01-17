@@ -1,53 +1,29 @@
 package com.example.ftest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var imageMessi : ImageView
-    private lateinit var imageRonaldo : ImageView
-    private lateinit var imageNeymar : ImageView
-    private lateinit var imageMbappe : ImageView
-    private lateinit var imageLewandowski : ImageView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        init()
-        registerListeners()
+        val navView = findViewById<BottomNavigationView>(R.id.botNavView)
+        val controller = findNavController(R.id.nav_host_fragment)
+        val appConfig = AppBarConfiguration(setOf(
+            R.id.profileFragment,
+            R.id.mainFragment,
+            R.id.ratingFragment
+
+
+        ))
+        setupActionBarWithNavController(controller, appConfig)
+        navView.setupWithNavController(controller)
     }
-
-    private fun init() {
-        imageMessi = findViewById(R.id.imageMessi)
-        imageRonaldo = findViewById(R.id.imageRonaldo)
-        imageNeymar = findViewById(R.id.imageNeymar)
-        imageMbappe = findViewById(R.id.imageMbappe)
-        imageLewandowski = findViewById(R.id.imageLewandowski)
-    }
-
-    private fun registerListeners() {
-
-        // RecyclerView -ს სანამ არ გავაკეთებთ, ეს ფუნცია ასე იყოს დროებით
-
-        imageMessi.setOnClickListener {
-
-        }
-        imageRonaldo.setOnClickListener {
-
-        }
-        imageNeymar.setOnClickListener {
-
-        }
-        imageMbappe.setOnClickListener {
-
-        }
-        imageLewandowski.setOnClickListener {
-
-        }
-    }
-
-
 }
