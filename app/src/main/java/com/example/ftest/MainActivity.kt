@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val appConfig = AppBarConfiguration(setOf(
             R.id.profileFragment,
             R.id.mainFragment,
-            R.id.ratingFragment
+            R.id.settingsFragment
 
 
         ))

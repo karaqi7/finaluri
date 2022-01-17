@@ -14,8 +14,8 @@
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_ratingFragment"
-            app:destination="@id/ratingFragment" />
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -26,19 +26,19 @@
             android:id="@+id/action_profileFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
         <action
-            android:id="@+id/action_profileFragment_to_ratingFragment"
-            app:destination="@id/ratingFragment" />
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/ratingFragment"
-        tools:layout="@layout/fragment_rating"
-        android:name="com.example.ftest.fragments.RatingFragment"
+        android:id="@+id/settingsFragment"
+        tools:layout="@layout/fragment_settings"
+        android:name="com.example.ftest.fragments.SettingsFragment"
         android:label="RatingFragment" >
         <action
-            android:id="@+id/action_ratingFragment_to_mainFragment"
+            android:id="@+id/action_settingsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
         <action
-            android:id="@+id/action_ratingFragment_to_profileFragment"
+            android:id="@+id/action_settingsFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
 </navigation>
