@@ -1,5 +1,6 @@
 package com.example.ftest.fragments
 
+
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -31,7 +32,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         // RecyclerView -ს სანამ არ გავაკეთებთ, ეს ფუნცია ასე იყოს დროებით
 
         imageMessi.setOnClickListener {
-
+            //მგონი ინტენტი არ მუშაობსს
         }
         imageRonaldo.setOnClickListener {
 
