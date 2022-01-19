@@ -6,14 +6,15 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageMessiCar"
+        android:id="@+id/imageCar"
         android:layout_width="150dp"
         android:layout_height="120dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -25,8 +26,8 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageMessiCar"
-        app:layout_constraintTop_toTopOf="@+id/imageMessiCar" />
+        app:layout_constraintStart_toEndOf="@+id/imageCar"
+        app:layout_constraintTop_toTopOf="@+id/imageCar" />
 
     <TextView
         android:id="@+id/carPrice"
@@ -37,6 +38,6 @@
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageMessiCar"
-        app:layout_constraintStart_toEndOf="@+id/imageMessiCar" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageCar"
+        app:layout_constraintStart_toEndOf="@+id/imageCar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

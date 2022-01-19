@@ -14,24 +14,24 @@ class RecyclerViewCarsAdapter(private val list: List<Cars>):
 
             class CarsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-                var imageMessiCar : ImageView
+                var imageCar : ImageView
                 var carName : TextView
                 var carPrice : TextView
 
                 init {
-                    imageMessiCar = itemView.findViewById(R.id.imageMessiCar)
+                    imageCar = itemView.findViewById(R.id.imageCar)
                     carName = itemView.findViewById(R.id.carName)
                     carPrice = itemView.findViewById(R.id.carPrice)
                 }
                 fun setData(cars: Cars) {
-                    Glide.with(itemView).load(cars.imageUrl).into(imageMessiCar) // ეს კიდევ გადასახედია
+                    Glide.with(imageCar).load(cars.imageUrl).into(imageCar) // ეს კიდევ გადასახედია, შეიძლება პირველი imageCar-ის ნაცვლად უნდა itemView
                     carName.text = cars.name
                     carPrice.text = cars.price
                 }
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarsViewHolder {
-        val carsView = LayoutInflater.from(parent.context).inflate(R.layout.messi_cars, parent, false)
+        val carsView = LayoutInflater.from(parent.context).inflate(R.layout.cars_adapter, parent, false)
         return CarsViewHolder(carsView)
     }
 

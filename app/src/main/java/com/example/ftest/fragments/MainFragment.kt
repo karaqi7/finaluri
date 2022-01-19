@@ -1,11 +1,14 @@
 package com.example.ftest.fragments
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.ftest.R
+import com.example.ftest.recyclerviews.MessiFragment
 
 class MainFragment : Fragment(R.layout.fragment_main) {
     private lateinit var imageMessi : ImageView
@@ -22,6 +25,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         imageNeymar = view.findViewById(R.id.imageNeymar)
         imageMbappe = view.findViewById(R.id.imageMbappe)
         imageLewandowski = view.findViewById(R.id.imageLewandowski)
+        // val controller = Navigation.findNavController(view) // წესით ამით უნდა მოხდეს MessiFragment-ზე გადასვლა
 
         registerListeners()
     }
@@ -32,7 +36,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         // RecyclerView -ს სანამ არ გავაკეთებთ, ეს ფუნცია ასე იყოს დროებით
 
         imageMessi.setOnClickListener {
-            //მგონი ინტენტი არ მუშაობსს
+
+            startActivity(Intent(this@MainFragment.requireContext(), MessiFragment::class.java))
         }
         imageRonaldo.setOnClickListener {
 

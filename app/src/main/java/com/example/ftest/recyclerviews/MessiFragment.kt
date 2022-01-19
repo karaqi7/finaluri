@@ -1,23 +1,22 @@
 package com.example.ftest.recyclerviews
 
 import android.os.Bundle
-import android.os.PersistableBundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ftest.R
 
-class MainMessi : AppCompatActivity() {
+class MessiFragment : Fragment(R.layout.recycler_messi) {
     private lateinit var recyclerView : RecyclerView
     private lateinit var recyclerViewCarsAdapter: RecyclerViewCarsAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.recycler_messi)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView = view.findViewById(R.id.recyclerView)
         recyclerViewCarsAdapter = RecyclerViewCarsAdapter(getData())
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = recyclerViewCarsAdapter
     }
 
