@@ -42,6 +42,7 @@ class ForgotPassActivity : AppCompatActivity() {
                     task ->
                 if (task.isSuccessful){
                     Toast.makeText(this, "Password recovery link Has been sent!", Toast.LENGTH_SHORT).show()
+                    finish()
                 } else {
                     Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
                 }
