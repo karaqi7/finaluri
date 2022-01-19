@@ -26,7 +26,7 @@ class ChangeUsernameFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        var rootView: View = inflater.inflate(R.layout.fragment_change_username, container, false)
+        val rootView: View = inflater.inflate(R.layout.fragment_change_username, container, false)
         val cancelButton = rootView.findViewById<Button>(R.id.cancelButton)
         val saveButton = rootView.findViewById<Button>(R.id.saveButton)
         val editTextName = rootView.findViewById<EditText>(R.id.editTextName)
