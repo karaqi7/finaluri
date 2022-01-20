@@ -9,7 +9,7 @@ import com.example.ftest.R
 class MessiActivity : AppCompatActivity() {
 
     private lateinit var newRecyclerView: RecyclerView
-    private lateinit var newArrayList : ArrayList<MessiCars>
+    private lateinit var newArrayList : ArrayList<Cars>
 
     lateinit var id : Array<Int>
     lateinit var imageUrl : Array<String>
@@ -87,7 +87,7 @@ class MessiActivity : AppCompatActivity() {
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
 
-        newArrayList = arrayListOf<MessiCars>()
+        newArrayList = arrayListOf<Cars>()
         getUserdata()
 
 
@@ -96,7 +96,7 @@ class MessiActivity : AppCompatActivity() {
     private fun getUserdata() {
 
         for(i in id.indices){
-            val mcars = MessiCars(id[i],imageUrl[i],name[i],price[i])
+            val mcars = Cars(id[i],imageUrl[i],name[i],price[i])
             newArrayList.add(mcars)
 
         }

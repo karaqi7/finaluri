@@ -9,7 +9,7 @@ import com.example.ftest.R
 class MbappeActivity : AppCompatActivity() {
 
     private lateinit var newRecyclerView: RecyclerView
-    private lateinit var newArrayList : ArrayList<MbappeCars>
+    private lateinit var newArrayList : ArrayList<Cars>
 
     lateinit var id : Array<Int>
     lateinit var imageUrl : Array<String>
@@ -58,7 +58,7 @@ class MbappeActivity : AppCompatActivity() {
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
 
-        newArrayList = arrayListOf<MbappeCars>()
+        newArrayList = arrayListOf<Cars>()
         getUserdata()
 
 
@@ -67,7 +67,7 @@ class MbappeActivity : AppCompatActivity() {
     private fun getUserdata() {
 
         for(i in id.indices){
-            val mcars = MbappeCars(id[i],imageUrl[i],name[i],price[i])
+            val mcars = Cars(id[i],imageUrl[i],name[i],price[i])
             newArrayList.add(mcars)
 
         }

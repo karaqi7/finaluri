@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ftest.R
 
-class NeymarAdapter(private val neymarCarsList: ArrayList<NeymarCars>) :
+class NeymarAdapter(private val neymarCarsList: ArrayList<Cars>) :
     RecyclerView.Adapter<NeymarAdapter.NeymarViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NeymarViewHolder {
 

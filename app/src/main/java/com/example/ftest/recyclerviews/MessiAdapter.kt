@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ftest.R
 
-class MessiAdapter(private val messiCarsList : ArrayList<MessiCars>) :
+class MessiAdapter(private val carsList : ArrayList<Cars>) :
     RecyclerView.Adapter<MessiAdapter.MessiViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessiViewHolder {
 
@@ -22,7 +22,7 @@ class MessiAdapter(private val messiCarsList : ArrayList<MessiCars>) :
 
     override fun onBindViewHolder(holder: MessiViewHolder, position: Int) {
 
-        val currentItem = messiCarsList[position]
+        val currentItem = carsList[position]
         Glide.with(holder.imageCar.context)
             .load(currentItem.imageUrl)
             .placeholder(R.drawable.ic_launcher_foreground)
@@ -35,7 +35,7 @@ class MessiAdapter(private val messiCarsList : ArrayList<MessiCars>) :
     }
 
     override fun getItemCount(): Int {
-        return messiCarsList.size
+        return carsList.size
     }
 
     class MessiViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {

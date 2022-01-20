@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ftest.R
 
-class LewandowskiAdapter(private val lewandowskiCarsList: ArrayList<LewandowskiCars>) :
+class LewandowskiAdapter(private val lewandowskiCarsList: ArrayList<Cars>) :
     RecyclerView.Adapter<LewandowskiAdapter.LewandowskiViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LewandowskiViewHolder {
 

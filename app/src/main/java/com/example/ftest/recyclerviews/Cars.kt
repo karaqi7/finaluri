@@ -1,6 +1,6 @@
 package com.example.ftest.recyclerviews
 
-data class MessiCars (
+data class Cars (
         var id : Int,
         var imageUrl : String,
         var name : String,

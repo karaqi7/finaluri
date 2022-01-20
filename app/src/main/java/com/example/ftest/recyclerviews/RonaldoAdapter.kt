@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ftest.R
 
-class RonaldoAdapter(private val ronaldoCarsList : ArrayList<RonaldoCars>) :
+class RonaldoAdapter(private val ronaldoCarsList : ArrayList<Cars>) :
     RecyclerView.Adapter<RonaldoAdapter.RonaldoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RonaldoViewHolder {
 

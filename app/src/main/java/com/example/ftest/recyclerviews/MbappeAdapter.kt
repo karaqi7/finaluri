@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ftest.R
 
-class MbappeAdapter(private val mbappeCarsList : ArrayList<MbappeCars>) :
+class MbappeAdapter(private val mbappeCarsList : ArrayList<Cars>) :
     RecyclerView.Adapter<MbappeAdapter.MbappeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MbappeViewHolder {
 
