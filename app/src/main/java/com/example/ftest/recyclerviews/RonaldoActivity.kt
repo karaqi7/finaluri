@@ -20,23 +20,54 @@ class RonaldoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ronaldo)
         id = arrayOf(
-            //example shown in MessiActivity
-
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
         )
         imageUrl = arrayOf(
-            //example shown in MessiActivity
-
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-Bugatti-Veyron-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-lamborghini-aventador-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-bentley-gt-speed-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-aston-martin-db9-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-audi-r8-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-ferrari-599-gto-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-ferrari-599-gtb-fiorano-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-ferrari-f430-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-rolls-royce-phantom-768x512.jpg",
+            "https://www.financialexpress.com/wp-content/uploads/2017/05/christiano-ronaldo-car-collection-maserati-grancabrio-768x512.jpg"
 
         )
         name = arrayOf(
-            //example shown in MessiActivity
-
-
+            "Bugatti Veyron",
+            "Lamborghini Aventador LP 700-4",
+            "Bentley GT Speed",
+            "Aston Martin DB9",
+            "Audi R8",
+            "Ferrari 599 GTO",
+            "Ferrari 599 GTB Fiorano",
+            "Ferrari F430",
+            "Rolls Royce Phantom",
+            "Maserati GranCabrio"
         )
 
         price = arrayOf(
-            //example shown in MessiActivity
-
+            "$1.7 million",
+            "$3,18,000",
+            "$220,000",
+            "$200,000",
+            "$150,000",
+            "$3,85,000",
+            "$310,000",
+            "$300,000",
+            "$400,000",
+            "$140,000"
 
         )
 
