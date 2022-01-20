@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.ftest.ChangePassActivity
@@ -54,7 +55,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
             }
         })
         changeUsernameButton.setOnClickListener {

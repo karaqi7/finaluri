@@ -22,7 +22,7 @@ class LewandowskiAdapter(private val lewandowskiCarsList: ArrayList<Cars>) :
     }
 
     override fun onBindViewHolder(holder: LewandowskiViewHolder, position: Int) {
-
+        holder.imageCar.setClipToOutline(true)
         val currentItem = lewandowskiCarsList[position]
         Glide.with(holder.imageCar.context)
             .load(currentItem.imageUrl)

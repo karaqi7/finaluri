@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
@@ -12,6 +13,8 @@
         android:layout_marginStart="105dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="106dp"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="5dp"
         android:layout_marginBottom="455dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +31,7 @@
         android:layout_marginStart="176dp"
         android:layout_marginEnd="177dp"
         android:text="TextView"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,6 +43,8 @@
         android:id="@+id/changePassTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         android:layout_marginStart="148dp"
         android:layout_marginEnd="149dp"
         android:text="Change Password"
@@ -53,6 +59,8 @@
         android:id="@+id/logoutText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         android:layout_marginStart="181dp"
         android:layout_marginEnd="172dp"
         android:text="Logout"
@@ -63,13 +71,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.801" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/changeUsernameButton"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginEnd="162dp"
-        android:text="Change UserName"
+        android:background="@drawable/round_bg"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Change UserName And PfP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

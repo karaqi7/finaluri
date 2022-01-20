@@ -25,6 +25,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         imageNeymar = view.findViewById(R.id.imageNeymar)
         imageMbappe = view.findViewById(R.id.imageMbappe)
         imageLewandowski = view.findViewById(R.id.imageLewandowski)
+        imageMessi.setClipToOutline(true)
+        imageRonaldo.setClipToOutline(true)
+        imageNeymar.setClipToOutline(true)
+        imageMbappe.setClipToOutline(true)
+        imageLewandowski.setClipToOutline(true)
         // val controller = Navigation.findNavController(view) // წესით ამით უნდა მოხდეს MessiFragment-ზე გადასვლა
 
         registerListeners()

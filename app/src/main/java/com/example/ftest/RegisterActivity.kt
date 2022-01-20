@@ -58,12 +58,19 @@ class RegisterActivity : AppCompatActivity() {
 
         if (email.isEmpty()) {
             inputEmailSub.text = "Email is Required"
+        }else{
+            inputEmailSub.text = ""
         }
         if (pass.isEmpty()) {
             inputPassSub.text = "Password is Required"
+        }else{
+            inputPassSub.text = ""
         }
         if (pass2.isEmpty()) {
             inputPassSub2.text = "Password is Required"
+        }
+        else{
+            inputPassSub2.text = ""
         }
 
         if (pass == pass2 && pass.length > 9 && pass.contains("[0-9]".toRegex()) && pass.contains("[a-z]".toRegex()) && email.contains("@") ){

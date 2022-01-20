@@ -21,6 +21,7 @@ class MessiAdapter(private val carsList : ArrayList<Cars>) :
     }
 
     override fun onBindViewHolder(holder: MessiViewHolder, position: Int) {
+        holder.imageCar.setClipToOutline(true)
 
         val currentItem = carsList[position]
         Glide.with(holder.imageCar.context)

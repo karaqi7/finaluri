@@ -42,6 +42,8 @@ class ChangeUsernameFragment : DialogFragment() {
             val name = editTextName.text.toString()
             val url = editTextUrle.text.toString()
 
+
+
             if (url.isNotEmpty()){
                 val userInfo = com.example.ftest.UserInfo(url, name)
                 db.child(user.currentUser?.uid!!).setValue(userInfo)
@@ -56,37 +58,6 @@ class ChangeUsernameFragment : DialogFragment() {
 
                 db.child(user.currentUser?.uid!!).setValue(userInfo)
             }
-
-            db.child(user.currentUser?.uid!!).addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    val userInfo = snapshot.getValue(com.example.ftest.UserInfo::class.java) ?: return
-                    val nameBase = userInfo.name
-                    val urlBase = userInfo.url
-
-                    val name = editTextName.text.toString()
-                    val url = editTextUrle.text.toString()
-
-                    if (url.isNotEmpty()){
-                        val userInfo = com.example.ftest.UserInfo(url, nameBase)
-                        db.child(user.currentUser?.uid!!).setValue(userInfo)
-                    }
-
-                    if (name.isNotEmpty()){
-                        val userInfo = com.example.ftest.UserInfo(urlBase, name)
-                        db.child(user.currentUser?.uid!!).setValue(userInfo)
-                    }
-                    if (url.isNotEmpty() && name.isNotEmpty()){
-                        val userInfo = com.example.ftest.UserInfo(url, name)
-
-                        db.child(user.currentUser?.uid!!).setValue(userInfo)
-                    }
-
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
-            })
 
 
             dismiss()

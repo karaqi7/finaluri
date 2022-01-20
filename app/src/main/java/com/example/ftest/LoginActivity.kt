@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -66,13 +67,19 @@ class LoginActivity : AppCompatActivity() {
 
                 inputEmailSub.text = "Please Input Email"
 
+            }else{
+                inputEmailSub.text = ""
             }
 
             if (inputPass.text.isEmpty()){
 
                 inputPassSub.text = "Please Input Password"
 
+            }else{
+                inputPassSub.text = ""
             }
+
+
         }
 
 
@@ -94,6 +101,8 @@ class LoginActivity : AppCompatActivity() {
     private fun login(){
         val email = inputEmail.text.toString()
         val pass = inputPass.text.toString()
+
+        if(email.isNotEmpty() && pass.isNotEmpty()){
         FirebaseAuth.getInstance()
             .signInWithEmailAndPassword(email, pass)
             .addOnCompleteListener { task ->
@@ -123,7 +132,7 @@ class LoginActivity : AppCompatActivity() {
                 }
 
             }
-    }
+    }}
 
 
 }

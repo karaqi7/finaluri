@@ -22,6 +22,7 @@ class RonaldoAdapter(private val ronaldoCarsList : ArrayList<Cars>) :
     }
 
     override fun onBindViewHolder(holder: RonaldoViewHolder, position: Int) {
+        holder.imageCar.setClipToOutline(true)
 
         val currentItem = ronaldoCarsList[position]
         Glide.with(holder.imageCar.context)

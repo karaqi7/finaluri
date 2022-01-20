@@ -10,7 +10,6 @@ import com.google.firebase.auth.FirebaseAuth
 class ForgotPassActivity : AppCompatActivity() {
 
     private lateinit var inputEmail: TextView
-    private lateinit var inputEmailSub: TextView
     private lateinit var buttonForgot: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +24,6 @@ class ForgotPassActivity : AppCompatActivity() {
     private fun init(){
 
         inputEmail = findViewById(R.id.inputEmail)
-        inputEmailSub = findViewById(R.id.inputEmailSub)
         buttonForgot = findViewById(R.id.buttonForgot)
 
     }
@@ -35,16 +33,17 @@ class ForgotPassActivity : AppCompatActivity() {
 
             val email = inputEmail.text.toString()
 
-            if ( email.isEmpty()){
-                inputEmailSub.text = "Input email"
-            }
-            FirebaseAuth.getInstance().sendPasswordResetEmail(email).addOnCompleteListener {
-                    task ->
-                if (task.isSuccessful){
-                    Toast.makeText(this, "Password recovery link Has been sent!", Toast.LENGTH_SHORT).show()
-                    finish()
-                } else {
-                    Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
+            if(email.isNotEmpty()){
+
+
+                FirebaseAuth.getInstance().sendPasswordResetEmail(email).addOnCompleteListener {
+                        task ->
+                    if (task.isSuccessful){
+                        Toast.makeText(this, "Password recovery link Has been sent!", Toast.LENGTH_SHORT).show()
+                        finish()
+                    } else {
+                        Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
