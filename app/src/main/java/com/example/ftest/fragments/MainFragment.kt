@@ -8,7 +8,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.ftest.R
-import com.example.ftest.recyclerviews.MessiFragment
+import com.example.ftest.recyclerviews.*
 
 class MainFragment : Fragment(R.layout.fragment_main) {
     private lateinit var imageMessi : ImageView
@@ -37,18 +37,24 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         imageMessi.setOnClickListener {
 
-            startActivity(Intent(this@MainFragment.requireContext(), MessiFragment::class.java))
+            startActivity(Intent(this@MainFragment.requireContext(), MessiActivity::class.java))
         }
         imageRonaldo.setOnClickListener {
+            startActivity(Intent(this@MainFragment.requireContext(), RonaldoActivity::class.java))
 
         }
         imageNeymar.setOnClickListener {
+            startActivity(Intent(this@MainFragment.requireContext(), NeymarActivity::class.java))
 
         }
         imageMbappe.setOnClickListener {
+            startActivity(Intent(this@MainFragment.requireContext(), MbappeActivity::class.java))
+
 
         }
         imageLewandowski.setOnClickListener {
+            startActivity(Intent(this@MainFragment.requireContext(), LewandowskiActivity::class.java))
+
 
         }
     }

@@ -12,10 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ftest">
         <activity
-            android:name=".ChangePassActivity"
+            android:name=".recyclerviews.LewandowskiActivity"
             android:exported="true" />
         <activity
-            android:name=".fragments.ChangeUsernameActivity"
+            android:name=".recyclerviews.MbappeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".recyclerviews.NeymarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".recyclerviews.RonaldoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".recyclerviews.MessiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChangePassActivity"
             android:exported="true" />
         <activity
             android:name=".fragments.ChangePfpActivity"
