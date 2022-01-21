@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +10,7 @@
         android:id="@+id/mainFragment"
         android:name="com.example.ftest.fragments.MainFragment"
         tools:layout="@layout/fragment_main"
-        android:label="MainFragment" >
+        android:label="Main" >
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
@@ -21,7 +22,7 @@
         android:id="@+id/profileFragment"
         tools:layout="@layout/fragment_profile"
         android:name="com.example.ftest.fragments.ProfileFragment"
-        android:label="ProfileFragment" >
+        android:label="Profile" >
         <action
             android:id="@+id/action_profileFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -33,7 +34,7 @@
         android:id="@+id/settingsFragment"
         tools:layout="@layout/fragment_settings"
         android:name="com.example.ftest.fragments.SettingsFragment"
-        android:label="RatingFragment" >
+        android:label="Settings" >
         <action
             android:id="@+id/action_settingsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
